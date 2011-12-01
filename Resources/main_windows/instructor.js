@@ -1,11 +1,11 @@
 var win 			= Ti.UI.currentWindow;
 
 //-- Our instructor views
-var gem 		= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/gem.png'});
-var emma 		= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/emma.png'});
-var charlie 	= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/charlie.png'});
-var clair 		= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/clair.png'});
-var charlie 	= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/charlie.png'});
+var gem 		= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/image.png'});
+var emma 		= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/image.png'});
+var charlie 	= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/image.png'});
+var clair 		= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/image.png'});
+var charlie 	= Ti.UI.createView({width:282,height:380,backgroundImage:'../assets/images/instructors/image.png'});
 
 //-- Crust title
 var titleText = Ti.UI.createLabel({
@@ -29,7 +29,7 @@ var instructorTitleView = Ti.UI.createView({
 	height:30,
 	top:20,
 	left:-6,
-	opacity:0
+	opacity:1
 });
 instructorTitleView.add(titleText);
 
@@ -37,22 +37,13 @@ var scrollView = Ti.UI.createScrollableView({
 	views:[gem,emma,charlie,clair,charlie],
 	showPagingControl:true,
 	clipViews:false,
-	top:63,
-	left:30,
-	right:30,
+	top:30,
+	left:0,
+	right:0,
 	height:380,
-	opacity:0
+	opacity:1
 });
 
 win.add(instructorTitleView);
 win.add(scrollView)
 
-//-- Fade the crust title in
-instructorTitleView.animate({
-	opacity:1,
-	duration:500
-});
-scrollView.animate({
-	opacity:1,
-	duration:500
-});
